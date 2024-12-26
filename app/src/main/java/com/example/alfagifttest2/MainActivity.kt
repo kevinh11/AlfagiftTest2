@@ -28,9 +28,10 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         loadStudents(studentList)
+        //untuk adapter dan tampilan
         studentListView = findViewById<RecyclerView>(R.id.studentListView)
         val studentLayoutManager = LinearLayoutManager(this)
         studentAdapter = StudentsAdapter(studentList)
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         studentListView.adapter = studentAdapter
     }
 
-
+    //mengambil semua student di database
     private fun loadStudents(studentsList : MutableList<Student>) {
         db.collection("students").get()
             .addOnSuccessListener { documents ->
@@ -56,7 +57,7 @@ class MainActivity : AppCompatActivity() {
                     studentsList.add(newStudent)
                     Log.d("Student", "Student name: ${doc.getString("Name")}")
                 }
-
+                //update dataset adapter
                 studentAdapter.notifyDataSetChanged()
             }
             .addOnFailureListener { exception ->

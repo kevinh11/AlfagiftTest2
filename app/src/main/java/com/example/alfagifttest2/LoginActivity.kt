@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
 
-
+        
         userField = findViewById(R.id.user_field)
         passField = findViewById(R.id.pass_field)
         loginButton = findViewById(R.id.login_button)
@@ -50,9 +50,11 @@ class LoginActivity : AppCompatActivity() {
         loginButton.setOnClickListener({
             Login()
         })
+
+        //buat ngeforce day mode
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
     }
-
+    
     private fun updateErrors(errorMsg : String) {
         errorText.visibility = View.VISIBLE
         errorText.text = errorMsg
@@ -69,7 +71,7 @@ class LoginActivity : AppCompatActivity() {
             else -> ""
         }
 
-        // Only show error message if there is one
+        
         if (msg.isNotEmpty()) {
             updateErrors(msg)
             return true
@@ -82,11 +84,12 @@ class LoginActivity : AppCompatActivity() {
 
     private fun Login() {
         //lebih keren daripada string matching kak wkwkwk
-
+        //kalo ada field yang kosong gak bisa log in
         if (checkIsEmpty()) {
             return
         }
 
+        //ambil data user
         db.collection("users")
             .whereEqualTo("username", userField.text.toString().trim())
             .whereEqualTo("password", passField.text.toString().trim()) //harusnya di hash kak
