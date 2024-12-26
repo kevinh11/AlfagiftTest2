@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AlfagiftTest2</string>
+    <string name="list_title">Alfagift Academy</string>
+    <string name="login_button">Log In</string>
+</resources>

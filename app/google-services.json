@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "501017114963",
+    "project_id": "kevinwijayauts",
+    "storage_bucket": "kevinwijayauts.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501017114963:android:bab8a0be07648573af49a6",
+        "android_client_info": {
+          "package_name": "com.example.alfagifttest2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfxv4nJPaEe7LQ8IAWs-X8EUZOwfZab5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501017114963:android:c6512873bc5d4660af49a6",
+        "android_client_info": {
+          "package_name": "com.example.if570_f_00000068544_kevinwijayahaidinata_uts_new2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfxv4nJPaEe7LQ8IAWs-X8EUZOwfZab5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
