@@ -35,10 +35,12 @@ class StudentsAdapter(private val students: MutableList<Student>) : RecyclerView
         holder.nameTextView.text = student.name
         holder.addressTextView.text = student.address
 
+
+        //menggunakan external library Glide untuk display gambar
         Glide.with(holder.itemView.context)
-            .load(student.profileImgUrl) // Replace `imageUrl` with the actual field in your `Student` class
-            .placeholder(R.drawable.baseline_person_24) // Optional: Add a placeholder image
-            .error(R.drawable.baseline_person_24) // Optional: Add an error image
+            .load(student.profileImgUrl)
+            .placeholder(R.drawable.baseline_person_24)
+            .error(R.drawable.baseline_person_24)
             .into(holder.studentImageView)
 
 
